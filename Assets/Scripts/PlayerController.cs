@@ -7,6 +7,13 @@ public class PlayerController : MonoBehaviour
     // PUBLIC VARIABLES
     public float speed = 4f;
     public float jumpForce = 6f;
+    public float dashForce = 15f;
+    public int jumpLimit;
+
+    public int dashLimit;
+    public float dashingPower = 24f;
+    public float dashingTime = 0.2f;
+    public float dashingCooldown = 1f;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -21,6 +28,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 _movement;
     private bool _facingRight = true;
     private bool _isGrounded;
+    private int _jumpCount = 0;
+
+    private bool _canDash = true;
+    private bool _isDashing;
+    public int _dashCount = 0;
+    
 
     private void Awake()
     {
@@ -36,11 +49,32 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Stop if doing a Dash
+        if (_isDashing) {
+            return;
+        }
+
         PlayerMove();
-        Jump();
+
+        // Jump Control
+        if (Input.GetButtonDown("Jump") && _jumpCount < jumpLimit) {
+            Jump();
+        }
 
         //Is Grounded?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        if (_rigidbody.velocity.y == 0 && _isGrounded) {
+            _jumpCount = 0;
+        }
+
+        // Dash
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _dashCount < dashLimit) {
+            StartCoroutine(Dash());
+            _dashCount++;
+        }
+        if (_canDash && _isGrounded) {
+            _dashCount = 0;
+        }
     }
 
     void FixedUpdate()
@@ -52,9 +86,19 @@ public class PlayerController : MonoBehaviour
     {
         _animator.SetBool("Idle", _movement == Vector2.zero);
         _animator.SetBool("IsGrounded", _isGrounded);
+        _animator.SetBool("Dash", _isDashing);
         _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+
         if (Input.GetButtonDown("Jump")) {
-            _animator.SetTrigger("Jump");
+            if (_jumpCount <= 1) {
+                _animator.SetTrigger("Jump");
+            } else {
+                _animator.SetTrigger("DoubleJump");
+            }
+        }
+        if (Input.GetButtonUp("Jump")) {
+            _animator.ResetTrigger("Jump");
+            _animator.ResetTrigger("DoubleJump");
         }
 
     }
@@ -88,8 +132,21 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump")) {
-            _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
+        _rigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        _jumpCount++;
+    }
+
+    private IEnumerator Dash()
+    {
+        _canDash = false;
+        _isDashing = true;
+        float originalGravity = _rigidbody.gravityScale;
+        _rigidbody.gravityScale = 0f;
+        _rigidbody.velocity = new Vector2(transform.localScale.x * dashForce, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        _rigidbody.gravityScale = originalGravity;
+        _isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        _canDash = true;
     }
 }

@@ -484,7 +484,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888850787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.506, z: 0.026232166}
+  m_LocalPosition: {x: 0.01, y: -0.477, z: 0.026232166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -614,11 +614,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpForce: 7
+  dashForce: 15
+  jumpLimit: 2
+  dashLimit: 2
+  dashingPower: 24
+  dashingTime: 0.2
+  dashingCooldown: 1
   groundCheck: {fileID: 888850788}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundCheckRadius: 0.1
+  _dashCount: 0
 --- !u!50 &1249327403
 Rigidbody2D:
   serializedVersion: 4
