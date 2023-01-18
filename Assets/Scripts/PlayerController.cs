@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
         //Is Grounded?
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        if (_rigidbody.velocity.y == 0 && _isGrounded) {
+        if (_rigidbody.velocity.y < 1 && _isGrounded) {
             _jumpCount = 0;
         }
 
