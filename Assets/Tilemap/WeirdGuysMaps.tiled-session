@@ -3,11 +3,68 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "W01-S01.tmx",
+    "activeFile": "Fase 7.tmx",
     "automapping.whileDrawing": true,
     "expandedProjectPaths": [
+        "."
     ],
     "fileStates": {
+        "Fase 1.tmx": {
+            "scale": 1.0713888888888887,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 719.1599688877368,
+                "y": 240.80891884884628
+            }
+        },
+        "Fase 2.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 1180.5,
+                "y": 235
+            }
+        },
+        "Fase 3.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 543.5,
+                "y": 248
+            }
+        },
+        "Fase 4.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 210.99999999999997,
+                "y": 216
+            }
+        },
+        "Fase 5.tmx": {
+            "scale": 1.403625,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 239.38017632914773,
+                "y": 799.7150235996082
+            }
+        },
+        "Fase 6.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 897.9999999999999,
+                "y": 666.6666666666666
+            }
+        },
+        "Fase 7.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 717.9999999999999,
+                "y": 481.3333333333333
+            }
+        },
         "Rules/Rules.tmx": {
             "scale": 1.5,
             "selectedLayer": 2,
@@ -21,11 +78,11 @@
             "scaleInEditor": 2
         },
         "W01-S01.tmx": {
-            "scale": 2,
+            "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 230,
-                "y": 237
+                "x": 695,
+                "y": 251
             }
         },
         "W01-S02.tmx": {
@@ -43,6 +100,30 @@
                 "x": 400.4416635995584,
                 "y": 240.70666175929335
             }
+        },
+        "W02-S01.tmx": {
+            "scale": 1,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 801,
+                "y": 296
+            }
+        },
+        "W02-S02.tmx": {
+            "scale": 1.3584999999999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 399.70555760029447,
+                "y": 239.60250276039753
+            }
+        },
+        "W02-S03.tmx": {
+            "scale": 1.1320833333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.6466691203533,
+                "y": 319.3227824806772
+            }
         }
     },
     "last.imagePath": "D:/Estudos/Games/SimplePlatformer-MarioLike/Weird Guys Adventure/Assets/Sprites/Terrain",
@@ -50,22 +131,33 @@
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 16,
     "map.tileWidth": 16,
-    "map.width": 50,
+    "map.width": 90,
     "openFiles": [
-        "W01-S01.tmx",
-        "W01-S02.tmx",
-        "W01-S03.tmx",
         "Rules/Rules.tmx",
-        "Terrains.tsx"
+        "Terrains.tsx",
+        "Fase 1.tmx",
+        "Fase 2.tmx",
+        "Fase 3.tmx",
+        "Fase 4.tmx",
+        "Fase 5.tmx",
+        "Fase 6.tmx",
+        "Fase 7.tmx"
     ],
     "project": "WeirdGuysMaps.tiled-project",
     "property.type": "bool",
     "recentFiles": [
-        "Terrains.tsx",
         "Rules/Rules.tmx",
-        "W01-S03.tmx",
-        "W01-S02.tmx",
-        "W01-S01.tmx"
+        "Terrains.tsx",
+        "Fase 1.tmx",
+        "Fase 2.tmx",
+        "Fase 3.tmx",
+        "Fase 4.tmx",
+        "Fase 5.tmx",
+        "Fase 6.tmx",
+        "Fase 7.tmx",
+        "W02-S03.tmx",
+        "W02-S02.tmx",
+        "W02-S01.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
