@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Fase 7.tmx",
+    "activeFile": "Fase 2.tmx",
     "automapping.whileDrawing": true,
     "expandedProjectPaths": [
         "."
@@ -13,7 +13,7 @@
             "scale": 1.0713888888888887,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 719.1599688877368,
+                "x": 741.5607985480945,
                 "y": 240.80891884884628
             }
         },
@@ -21,7 +21,7 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1180.5,
+                "x": 526.5,
                 "y": 235
             }
         },
@@ -29,16 +29,16 @@
             "scale": 1,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 543.5,
-                "y": 248
+                "x": 800,
+                "y": 240.5
             }
         },
         "Fase 4.tmx": {
             "scale": 1.5,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 210.99999999999997,
-                "y": 216
+                "x": 240,
+                "y": 799.6666666666666
             }
         },
         "Fase 5.tmx": {
@@ -53,8 +53,8 @@
             "scale": 0.75,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 897.9999999999999,
-                "y": 666.6666666666666
+                "x": 800,
+                "y": 799.3333333333333
             }
         },
         "Fase 7.tmx": {
@@ -149,12 +149,12 @@
         "Rules/Rules.tmx",
         "Terrains.tsx",
         "Fase 1.tmx",
-        "Fase 2.tmx",
-        "Fase 3.tmx",
-        "Fase 4.tmx",
-        "Fase 5.tmx",
-        "Fase 6.tmx",
         "Fase 7.tmx",
+        "Fase 6.tmx",
+        "Fase 5.tmx",
+        "Fase 4.tmx",
+        "Fase 3.tmx",
+        "Fase 2.tmx",
         "W02-S03.tmx",
         "W02-S02.tmx",
         "W02-S01.tmx"
