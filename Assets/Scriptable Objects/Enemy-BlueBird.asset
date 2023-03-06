@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504edbd07ca7a80448261707615534dd, type: 3}
+  m_Name: Enemy-BlueBird
+  m_EditorClassIdentifier: 
+  name: Blue Bird
+  health: 1
+  speed: 5
+  canPatrol: 1
+  canJump: 0
+  canFly: 1
+  canShoot: 0
+  canGuard: 0
+  canAttack: 0
+  canFollow: 0
+  animController: {fileID: 9100000, guid: 02190634b3ecdf149936c1c753203650, type: 2}
