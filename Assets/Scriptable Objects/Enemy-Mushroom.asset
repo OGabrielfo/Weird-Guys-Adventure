@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Mushroom
   health: 1
   speed: 4
+  waitingTime: 1.5
+  colliderOffset: {x: 0, y: -0.22}
+  colliderSize: {x: 0.4, y: 0.52}
   canPatrol: 1
   canJump: 0
   canFly: 0

@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Rock P
   health: 1
   speed: 5
+  waitingTime: 1
+  colliderOffset: {x: 0, y: -0.06}
+  colliderSize: {x: 0.4, y: 0.4}
   canPatrol: 1
   canJump: 0
   canFly: 0

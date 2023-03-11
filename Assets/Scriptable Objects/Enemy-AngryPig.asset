@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Angry Pig
   health: 2
-  speed: 5
+  speed: 3
+  waitingTime: 2
+  colliderOffset: {x: 0, y: -0.08}
+  colliderSize: {x: 0.66, y: 0.74}
   canPatrol: 1
   canJump: 0
   canFly: 0

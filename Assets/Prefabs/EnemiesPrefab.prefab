@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 8911906279131353216}
   - component: {fileID: 2630871884243476167}
   - component: {fileID: 4384571709960535121}
-  - component: {fileID: 3972774420520130168}
-  m_Layer: 0
+  - component: {fileID: 4603666513233305617}
+  m_Layer: 6
   m_Name: EnemiesPrefab
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,8 @@ MonoBehaviour:
   name: 
   health: 0
   speed: 0
+  colliderOffset: {x: 0, y: 0}
+  colliderSize: {x: 0, y: 0}
   canPatrol: 0
   canJump: 0
   canFly: 0
@@ -111,6 +113,10 @@ MonoBehaviour:
   canGuard: 0
   canAttack: 0
   canFollow: 0
+  patrolLimiter:
+    serializedVersion: 2
+    m_Bits: 0
+  _facingRight: 0
 --- !u!95 &2630871884243476167
 Animator:
   serializedVersion: 4
@@ -152,8 +158,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &3972774420520130168
-CircleCollider2D:
+--- !u!70 &4603666513233305617
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -165,6 +171,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019408226, y: -0.13137913}
-  serializedVersion: 2
-  m_Radius: 0.33407974
+  m_Offset: {x: 0, y: -0.08}
+  m_Size: {x: 0.66, y: 0.74}
+  m_Direction: 0

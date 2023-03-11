@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LimitPatrolUnsee : MonoBehaviour
 {
-    private Renderer render;
+    private SpriteRenderer render;
 
     void Awake()
     {
-        render = GetComponent<Renderer>();
+        render = GetComponent<SpriteRenderer>();
 
-        render.gameObject.SetActive(false);
+        render.color = new Color(1, 1, 1, 0);
     }
 
     // Update is called once per frame
@@ -18,4 +18,5 @@ public class LimitPatrolUnsee : MonoBehaviour
     {
         
     }
+
 }
