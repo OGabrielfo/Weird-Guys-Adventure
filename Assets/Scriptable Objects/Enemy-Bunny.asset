@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Bunny
   health: 1
-  speed: 7
+  speed: 2
+  waitingTime: 1
+  colliderOffset: {x: -0.043, y: -0.3}
+  colliderSize: {x: 0.42, y: 0.73}
   canPatrol: 1
   canJump: 1
   canFly: 0

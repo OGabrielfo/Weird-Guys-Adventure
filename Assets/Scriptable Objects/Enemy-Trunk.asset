@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Trunk
   health: 2
   speed: 4
+  waitingTime: 0
+  colliderOffset: {x: 0.01, y: -0.14}
+  colliderSize: {x: 0.5, y: 0.66}
   canPatrol: 1
   canJump: 0
   canFly: 0

@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Fat Bird
   health: 1
   speed: 0
+  waitingTime: 0
+  colliderOffset: {x: -0.002, y: -0.14}
+  colliderSize: {x: 0.68, y: 0.77}
   canPatrol: 0
   canJump: 1
   canFly: 0

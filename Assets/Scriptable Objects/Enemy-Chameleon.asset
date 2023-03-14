@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Chameleon
   health: 1
   speed: 4
+  waitingTime: 0
+  colliderOffset: {x: 0.62, y: -0.17}
+  colliderSize: {x: 0.36, y: 0.81}
   canPatrol: 1
   canJump: 0
   canFly: 0

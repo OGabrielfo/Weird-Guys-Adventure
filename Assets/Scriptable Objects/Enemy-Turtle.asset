@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Turtle
   health: 1
   speed: 3
+  waitingTime: 0
+  colliderOffset: {x: -0.01, y: -0.08}
+  colliderSize: {x: 0.57, y: 0.57}
   canPatrol: 1
   canJump: 0
   canFly: 0

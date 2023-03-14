@@ -15,6 +15,9 @@ MonoBehaviour:
   name: Plant
   health: 1
   speed: 0
+  waitingTime: 0
+  colliderOffset: {x: 0.13, y: -0.17}
+  colliderSize: {x: 0.6, y: 0.9}
   canPatrol: 0
   canJump: 0
   canFly: 0

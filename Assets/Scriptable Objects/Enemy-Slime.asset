@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: Enemy-Slime
   m_EditorClassIdentifier: 
   name: Slime
-  health: 1
+  health: 3
   speed: 3
+  waitingTime: 0
+  colliderOffset: {x: 0, y: -0.06}
+  colliderSize: {x: 0.74, y: 0.74}
   canPatrol: 0
   canJump: 0
   canFly: 0

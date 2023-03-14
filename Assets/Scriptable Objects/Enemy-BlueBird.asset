@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Blue Bird
   health: 1
-  speed: 5
+  speed: 2
+  waitingTime: 1
+  colliderOffset: {x: 0, y: -0.08}
+  colliderSize: {x: 0.66, y: 0.74}
   canPatrol: 1
   canJump: 0
   canFly: 1

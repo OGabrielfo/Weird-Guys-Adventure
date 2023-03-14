@@ -72,18 +72,37 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    void FixedUpdate() {
+        _anim.SetFloat("Health", health);
+        _anim.SetFloat("HorizontalVelocity", _rb.velocity.x);
+        _anim.SetFloat("VerticalVelocity", _rb.velocity.y);
+        _anim.SetBool("Idle", _actualSpeed == 0);
+    }
+
+    void LateUpdate() {
+        
+    }
+
+    #region CONFIGURAÇÕES DINÂMICAS
+    void DefineCollider() {
+        _capsuleCollider.offset = colliderOffset;
+        _capsuleCollider.size = colliderSize;
+    }
+
+    #endregion
+
+    #region MECÂNICAS
+
+    #region Voar
     void CanFly() {
         if (canFly) {
             _rb.gravityScale = 0;
         }
     }
 
-    void DefineCollider() {
-        _capsuleCollider.offset = colliderOffset;
-        _capsuleCollider.size = colliderSize;
-    }
-     
-    #region PATROL MOVEMENT
+    #endregion
+
+    #region Patrulha
     //---------------------------------------ENEMY PATROL MOVEMENT---------------------------------------
     void Flip() {
         _facingRight = !_facingRight;
@@ -116,6 +135,29 @@ public class EnemyController : MonoBehaviour
             StartCoroutine("WaitingTime");
         }
     }
+
+    #endregion
+
+    #region Pulo
+
+    #endregion
+
+    #region Atirar
+
+    #endregion
+
+    #region Defender
+
+    #endregion
+
+    #region Atacar
+
+    #endregion
+
+    #region Perseguir
+
+    #endregion
+
 
     #endregion
 }
