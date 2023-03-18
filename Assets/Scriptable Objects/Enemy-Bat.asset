@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Bat
   health: 1
   speed: 5
-  waitingTime: 0
+  waitingTime: 2
   colliderOffset: {x: -0.02, y: -0.01}
   colliderSize: {x: 0.36, y: 0.51}
   canPatrol: 0

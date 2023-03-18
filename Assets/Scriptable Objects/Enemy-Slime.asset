@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Slime
   health: 3
   speed: 3
-  waitingTime: 0
+  waitingTime: 2
   colliderOffset: {x: 0, y: -0.06}
   colliderSize: {x: 0.74, y: 0.74}
   canPatrol: 0

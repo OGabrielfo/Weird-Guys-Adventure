@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Rock M
   health: 1
   speed: 4
-  waitingTime: 0
+  waitingTime: 2
   colliderOffset: {x: 0, y: -0.09}
   colliderSize: {x: 0.65, y: 0.65}
   canPatrol: 1

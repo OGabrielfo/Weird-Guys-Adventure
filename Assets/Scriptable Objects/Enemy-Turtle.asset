@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Turtle
   health: 1
-  speed: 3
-  waitingTime: 0
+  speed: 1
+  waitingTime: 2
   colliderOffset: {x: -0.01, y: -0.08}
   colliderSize: {x: 0.57, y: 0.57}
   canPatrol: 1

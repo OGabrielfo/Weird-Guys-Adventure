@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
 
     private bool _facingRight;
     private float _actualSpeed;
+    private bool _defending;
 
     private void Awake() {
         _anim = GetComponent<Animator>();
@@ -61,7 +62,10 @@ public class EnemyController : MonoBehaviour
 
         CanFly();
         DefineCollider();
-        
+
+        if (canGuard) {
+            StartCoroutine("Guard");
+        }
     }
 
     // Update is called once per frame
@@ -73,14 +77,15 @@ public class EnemyController : MonoBehaviour
     }
 
     void FixedUpdate() {
+        
+    }
+
+    void LateUpdate() {
         _anim.SetFloat("Health", health);
         _anim.SetFloat("HorizontalVelocity", _rb.velocity.x);
         _anim.SetFloat("VerticalVelocity", _rb.velocity.y);
         _anim.SetBool("Idle", _actualSpeed == 0);
-    }
-
-    void LateUpdate() {
-        
+        _anim.SetBool("Defense", _defending);
     }
 
     #region CONFIGURAÇÕES DINÂMICAS
@@ -147,6 +152,26 @@ public class EnemyController : MonoBehaviour
     #endregion
 
     #region Defender
+
+    private IEnumerator Guard() {
+
+        if (_defending) {
+            _defending = false;
+        } else {
+            _defending = true;
+        }
+        Debug.Log(_defending);
+        yield return new WaitForSeconds(waitingTime * 5);
+        StartCoroutine("Guard");
+    }
+
+    void StopAndWalk () {
+        if (_actualSpeed != 0) {
+            _actualSpeed = 0;
+        } else {
+            _actualSpeed = speed;
+        }
+    }
 
     #endregion
 

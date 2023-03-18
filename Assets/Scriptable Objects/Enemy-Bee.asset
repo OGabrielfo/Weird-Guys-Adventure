@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Bee
   health: 1
   speed: 5
-  waitingTime: 0
+  waitingTime: 0.5
   colliderOffset: {x: 0, y: 0}
   colliderSize: {x: 0.45, y: 0.67}
   canPatrol: 1

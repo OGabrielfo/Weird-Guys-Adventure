@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Duck
   health: 1
-  speed: 5
+  speed: 0
   waitingTime: 0
   colliderOffset: {x: -2.98, y: -0.155}
   colliderSize: {x: 0.47, y: 0.74}

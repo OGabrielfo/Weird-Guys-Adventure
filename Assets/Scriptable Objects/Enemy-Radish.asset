@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Radish
   health: 2
   speed: 3
-  waitingTime: 0
+  waitingTime: 2
   colliderOffset: {x: 0, y: -0.2}
   colliderSize: {x: 0.63, y: 0.77}
   canPatrol: 1

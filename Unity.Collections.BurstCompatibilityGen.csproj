@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D8E8371F-D09E-DE74-8F4D-A11401B142C7}</ProjectGuid>
+    <ProjectGuid>{A28A883F-2EB7-4DDD-BE58-514BFD56DE18}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.2D.IK.Editor</AssemblyName>
+    <AssemblyName>Unity.Collections.BurstCompatibilityGen</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -48,7 +48,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
     <UnityProjectGeneratorVersion>2.0.17</UnityProjectGeneratorVersion>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2022.2.11f1</UnityVersion>
   </PropertyGroup>
@@ -58,17 +58,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\IKGizmos.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\FabrikSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\LimbSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\IKEditorManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\IKManager2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\Solver2DEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.BurstCompatibilityGen\BurstCompatibilityTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Unity.2D.IK.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.BurstCompatibilityGen\Unity.Collections.BurstCompatibilityGen.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -754,29 +747,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{E23BDE1A-3388-C8A6-FF33-A248CCC3842B}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
+    <ProjectReference Include="Unity.Burst.csproj">
+      <Project>{9E2B2278-D789-B329-BE8B-0AF52EF2493D}</Project>
+      <Name>Unity.Burst</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{015858EF-F51A-7B84-A6FB-CE616906E2F2}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{85419914-52C3-6C48-57CA-FD2A0F8FC507}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{6200A233-8EC9-4844-4383-02A1E04D3D0F}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{FFAB556D-2452-5F43-329D-7E65F97FBEA8}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{598AF62A-A29A-C5C3-DB03-67B2A04C53F0}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
+    <ProjectReference Include="Unity.Collections.csproj">
+      <Project>{095C0786-1F05-7158-5EBA-440DD328ADDA}</Project>
+      <Name>Unity.Collections</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{2690EF88-997A-C50E-09B2-AACF7482EBA9}</Project>

@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Chicken
   health: 1
   speed: 5
-  waitingTime: 0
+  waitingTime: 0.5
   colliderOffset: {x: -0.02, y: -0.12}
   colliderSize: {x: 0.43, y: 0.74}
   canPatrol: 1

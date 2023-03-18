@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D8E8371F-D09E-DE74-8F4D-A11401B142C7}</ProjectGuid>
+    <ProjectGuid>{CAF5A60E-7332-DC83-DC30-717C840501AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Unity.2D.IK.Editor</AssemblyName>
+    <AssemblyName>Unity.AI.Navigation.Editor.ConversionSystem</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -58,17 +58,23 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\IKGizmos.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\FabrikSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\LimbSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\CCDSolver2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\IKEditorManager.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\IKManager2DEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Inspectors\Solver2DEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\ConverterItemInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\SystemConverter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\ConverterItemDescriptor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\SystemConverterContainer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\RunItemContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\InitializeConverterContext.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\SystemConvertersEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\EditorStyles.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Library\PackageCache\com.unity.2d.animation@9.0.1\IK\Editor\Unity.2D.IK.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\converter_widget.uss" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\Unity.AI.Navigation.Editor.ConversionSystem.asmdef" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\converter_widget_item.uxml" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\converter_widget.uxml" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\converter_editor.uxml" />
+    <None Include="Library\PackageCache\com.unity.ai.navigation@1.1.1\Editor\ConversionSystem\converter_editor.uss" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -754,30 +760,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.InternalAPIEditorBridge.001.csproj">
-      <Project>{E23BDE1A-3388-C8A6-FF33-A248CCC3842B}</Project>
-      <Name>Unity.InternalAPIEditorBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.csproj">
-      <Project>{015858EF-F51A-7B84-A6FB-CE616906E2F2}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Editor.csproj">
-      <Project>{85419914-52C3-6C48-57CA-FD2A0F8FC507}</Project>
-      <Name>Unity.2D.Common.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.csproj">
-      <Project>{6200A233-8EC9-4844-4383-02A1E04D3D0F}</Project>
-      <Name>Unity.2D.Common.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.csproj">
-      <Project>{FFAB556D-2452-5F43-329D-7E65F97FBEA8}</Project>
-      <Name>Unity.2D.IK.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
-      <Project>{598AF62A-A29A-C5C3-DB03-67B2A04C53F0}</Project>
-      <Name>Unity.2D.Animation.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{2690EF88-997A-C50E-09B2-AACF7482EBA9}</Project>
       <Name>UnityEditor.UI</Name>
