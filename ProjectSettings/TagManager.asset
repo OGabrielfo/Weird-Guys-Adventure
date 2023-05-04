@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PatrolLimiter
   - Enemy
+  - CeilingPoint
   layers:
   - Default
   - TransparentFX
