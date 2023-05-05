@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemiesBehaviours\AngryPatrolling.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\BunnyController.cs" />
     <Compile Include="Assets\Scripts\PlayerIdentifier.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BlueBirdController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\Patroller.cs" />
