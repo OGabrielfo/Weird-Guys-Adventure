@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1909790134481464241}
   - component: {fileID: 62579499473469465}
   - component: {fileID: 1876197347624300376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +310,7 @@ Transform:
   - {fileID: 8434157516232367596}
   - {fileID: 4754800269533836615}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7553914460219218959
 GameObject:

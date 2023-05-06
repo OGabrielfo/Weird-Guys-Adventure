@@ -30,7 +30,7 @@ public class BunnyController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //_distanciaAtualDoPlayer = Vector2.Distance(_player.transform.position, transform.position);
+        
         if(_player.transform.position.x >= _rb.position.x - distanciaMaximaDoPlayer && _player.transform.position.x <= _rb.position.x + distanciaMaximaDoPlayer && IsGrounded())
         {
             Jump();
@@ -61,5 +61,19 @@ public class BunnyController : MonoBehaviour
         {
             return false;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.SendMessage("Damage");
+        }
+    }
+
+    void Damage()
+    {
+        life--;
+        _anim.SetTrigger("Damaged");
     }
 }

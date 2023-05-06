@@ -20,7 +20,7 @@ public class AngryPigController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
     }
@@ -32,5 +32,19 @@ public class AngryPigController : MonoBehaviour
         {
             _anim.SetBool("Stage2", true);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.SendMessage("Damage");
+        }
+    }
+
+    void Damage()
+    {
+        life--;
+        _anim.SetTrigger("Damaged");
     }
 }

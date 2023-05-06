@@ -18,9 +18,12 @@ public class Patroller : MonoBehaviour
      
     }
 
-    void Update()
+    void FixedUpdate()
     {
-
+        foreach (Transform waypoint in waypoints)
+        {
+            waypoint.position = new Vector2(waypoint.position.x, transform.position.y);
+        }
     }
 
     public void MoveToNextWaypoint(float speed)

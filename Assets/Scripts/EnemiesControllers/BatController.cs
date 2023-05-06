@@ -44,4 +44,18 @@ public class BatController : MonoBehaviour
             _anim.SetBool("Idle", true);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.SendMessage("Damage");
+        }
+    }
+
+    void Damage()
+    {
+        life--;
+        _anim.SetTrigger("Damaged");
+    }
 }

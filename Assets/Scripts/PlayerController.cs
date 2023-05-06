@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         // Ground Check
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public LayerMask enemyCheck;
     public float groundCheckRadius;
 
         // Wall Jump
@@ -54,6 +55,10 @@ public class PlayerController : MonoBehaviour
     private bool _wallSliding;
     private bool _wallJumping;
 
+    //Attack
+    private bool _hitEnemy;
+    private bool _hitedEnemy;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -68,6 +73,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Is in enemy head?
+        _hitEnemy = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyCheck);
+
         // Stop if doing a Dash
         if (_isDashing || _wallJumping) {
             return;
@@ -114,11 +122,6 @@ public class PlayerController : MonoBehaviour
         if (_wallJumping) {
             _rigidbody.velocity = new Vector2(xWallForce * -_movement.x, yWallForce);
         }
-    }
-
-    void FixedUpdate()
-    {
-        
     }
 
     void LateUpdate()
@@ -196,5 +199,33 @@ public class PlayerController : MonoBehaviour
 
     void SetWallJumpingToFalse() {
         _wallJumping = false;
+    }
+
+    void Damage()
+    {
+        if (!_hitEnemy)
+        {
+            life--;
+            _animator.SetTrigger("Damaged");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy") && _hitEnemy && !_hitedEnemy)
+        {
+            _jumpCount--;
+            Jump();
+            _hitedEnemy = true;
+            collision.gameObject.SendMessage("Damage");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            _hitedEnemy = false;
+        }
     }
 }
