@@ -13,8 +13,11 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 6f;
     public float dashForce = 15f;
     public int jumpLimit;
+    public float knockbackForce;
+    public Vector2 knockbackDirection;
+    public bool _isHited = false;
 
-        // Dash
+    // Dash
     public int dashLimit;
     public float dashingPower = 24f;
     public float dashingTime = 0.2f;
@@ -80,8 +83,11 @@ public class PlayerController : MonoBehaviour
         if (_isDashing || _wallJumping) {
             return;
         }
-
-        PlayerMove();
+        if (!_isHited)
+        {
+            PlayerMove();
+        }
+        
 
         // Jump Control
         if (Input.GetButtonDown("Jump") && _jumpCount < jumpLimit) {
@@ -210,6 +216,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy") && _hitEnemy && !_hitedEnemy)
@@ -218,6 +226,13 @@ public class PlayerController : MonoBehaviour
             Jump();
             _hitedEnemy = true;
             collision.gameObject.SendMessage("Damage");
+        }
+        else if (collision.gameObject.CompareTag("Enemy") && !_hitEnemy)
+        {
+            knockbackDirection = (transform.position - collision.transform.position).normalized;
+            knockbackDirection = new Vector2(knockbackDirection.x * knockbackForce, knockbackDirection.y * knockbackForce * 2f);
+            //knockbackDirection = knockbackDirection * knockbackForce;
+            
         }
     }
 

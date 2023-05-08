@@ -58,18 +58,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.2.11f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EnemyDead.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\AngryPatrolling.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BunnyController.cs" />
     <Compile Include="Assets\Scripts\PlayerIdentifier.cs" />
+    <Compile Include="Assets\Scripts\PlayerKnockback.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BlueBirdController.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\BeeController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\Patroller.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\Patrolling.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\IdleWaiting.cs" />
-    <Compile Include="Assets\EnemyDead.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BatController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\RockController.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\FlyingChase.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\TurtleController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\AngryPigController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\MushController.cs" />
   </ItemGroup>
