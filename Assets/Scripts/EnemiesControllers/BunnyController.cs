@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BunnyController : MonoBehaviour
 {
-    public float life;
+    public int life;
     public float jumpForce;
     public float distanciaMaximaDoPlayer;
     public Transform groundCheck;
@@ -41,6 +41,7 @@ public class BunnyController : MonoBehaviour
     {
         _anim.SetFloat("VerticalVelocity", _rb.velocity.y);
         _anim.SetBool("Grounded", IsGrounded());
+        _anim.SetInteger("Life", life);
     }
 
     void Jump()

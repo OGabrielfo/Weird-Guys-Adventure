@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -146,7 +148,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,9 +167,9 @@ TextureImporter:
       name: Hit (84x38)_1
       rect:
         serializedVersion: 2
-        x: 84
+        x: 124
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -186,9 +188,9 @@ TextureImporter:
       name: Hit (84x38)_2
       rect:
         serializedVersion: 2
-        x: 168
+        x: 248
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,9 +209,9 @@ TextureImporter:
       name: Hit (84x38)_3
       rect:
         serializedVersion: 2
-        x: 252
+        x: 372
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -228,9 +230,9 @@ TextureImporter:
       name: Hit (84x38)_4
       rect:
         serializedVersion: 2
-        x: 336
+        x: 496
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,14 +258,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hit (84x38)_4: 463977680
       Hit (84x38)_0: 1284106190
-      Hit (84x38)_3: 281898725
       Hit (84x38)_1: 555582127
       Hit (84x38)_2: 682338581
-  spritePackingTag: 
+      Hit (84x38)_3: 281898725
+      Hit (84x38)_4: 463977680
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

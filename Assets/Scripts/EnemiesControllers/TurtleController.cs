@@ -41,6 +41,7 @@ public class TurtleController : MonoBehaviour
     private void LateUpdate()
     {
         _anim.SetBool("Defense", _defense);
+        _anim.SetInteger("Life", life);
     }
 
     IEnumerator Defense()

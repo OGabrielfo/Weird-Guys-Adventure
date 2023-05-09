@@ -28,6 +28,12 @@ public class RockController : MonoBehaviour
         _col.offset = offsets[life - 1];
         _col.radius = radius[life - 1];
     }
+
+    private void LateUpdate()
+    {
+        _anim.SetInteger("Life", life);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -146,7 +148,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,9 +167,9 @@ TextureImporter:
       name: Attack (84x38)_1
       rect:
         serializedVersion: 2
-        x: 84
+        x: 124
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -186,9 +188,9 @@ TextureImporter:
       name: Attack (84x38)_2
       rect:
         serializedVersion: 2
-        x: 168
+        x: 248
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,9 +209,9 @@ TextureImporter:
       name: Attack (84x38)_3
       rect:
         serializedVersion: 2
-        x: 252
+        x: 372
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -228,9 +230,9 @@ TextureImporter:
       name: Attack (84x38)_4
       rect:
         serializedVersion: 2
-        x: 336
+        x: 496
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -249,9 +251,9 @@ TextureImporter:
       name: Attack (84x38)_5
       rect:
         serializedVersion: 2
-        x: 420
+        x: 620
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -270,9 +272,9 @@ TextureImporter:
       name: Attack (84x38)_6
       rect:
         serializedVersion: 2
-        x: 504
+        x: 744
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -291,9 +293,9 @@ TextureImporter:
       name: Attack (84x38)_7
       rect:
         serializedVersion: 2
-        x: 588
+        x: 868
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,9 +314,9 @@ TextureImporter:
       name: Attack (84x38)_8
       rect:
         serializedVersion: 2
-        x: 672
+        x: 992
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -333,9 +335,9 @@ TextureImporter:
       name: Attack (84x38)_9
       rect:
         serializedVersion: 2
-        x: 756
+        x: 1116
         y: 0
-        width: 84
+        width: 124
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -361,19 +363,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Attack (84x38)_2: -1232943985
-      Attack (84x38)_5: -586643454
-      Attack (84x38)_3: 660014845
-      Attack (84x38)_9: -1182021724
-      Attack (84x38)_1: -991359769
-      Attack (84x38)_6: 1062609472
       Attack (84x38)_0: 9417233
-      Attack (84x38)_8: -1578875179
+      Attack (84x38)_1: -991359769
+      Attack (84x38)_2: -1232943985
+      Attack (84x38)_3: 660014845
       Attack (84x38)_4: -717780240
+      Attack (84x38)_5: -586643454
+      Attack (84x38)_6: 1062609472
       Attack (84x38)_7: -321241716
-  spritePackingTag: 
+      Attack (84x38)_8: -1578875179
+      Attack (84x38)_9: -1182021724
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
