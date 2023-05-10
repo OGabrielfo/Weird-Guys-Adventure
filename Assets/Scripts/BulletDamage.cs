@@ -25,7 +25,7 @@ public class BulletDamage : MonoBehaviour
         {
             collision.gameObject.SendMessage("Damage");
 
-            gameObject.SetActive(false);
+            Destroy(gameObject);
 
             GameObject particleSystem = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity);
             particleSystem.SetActive(true);
@@ -34,7 +34,7 @@ public class BulletDamage : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             // Desativa a bala original e ativa o sistema de partículas da bala quebrada
-            gameObject.SetActive(false);
+            Destroy(gameObject);
 
             GameObject particleSystem = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity);
             particleSystem.SetActive(true);

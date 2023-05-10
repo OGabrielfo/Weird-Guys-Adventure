@@ -2,49 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdleWaiting : StateMachineBehaviour
+public class FatBirdAscending : StateMachineBehaviour
 {
-
-    private Patroller _patrol;
     private Rigidbody2D _rb;
-    private float _waitTime;
-
+    private FatBirdController _fatBird;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _patrol = animator.GetComponent<Patroller>();
         _rb = animator.GetComponent<Rigidbody2D>();
-        _waitTime = _patrol.waitTime;
+        _fatBird = animator.GetComponent<FatBirdController>();
+        _rb.gravityScale = 0f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (_waitTime > 0)
-        {
-            _rb.velocity = new Vector2(0f, _rb.velocity.y);
-            _waitTime -= Time.deltaTime;
-        } else
-        {
-            animator.SetBool("Idle", false);
-        }
+        _rb.velocity = Vector2.up * _fatBird.ascendingVelocity;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _rb.velocity = Vector3.zero;
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
-    override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        // Implement code that processes and affects root motion
-    }
+    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that processes and affects root motion
+    //}
 
     // OnStateIK is called right after Animator.OnAnimatorIK()
-    override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        // Implement code that sets up animation IK (inverse kinematics)
-    }
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that sets up animation IK (inverse kinematics)
+    //}
 }

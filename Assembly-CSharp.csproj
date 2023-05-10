@@ -62,23 +62,28 @@
     <Compile Include="Assets\Scripts\EnemiesBehaviours\AngryPatrolling.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BunnyController.cs" />
     <Compile Include="Assets\Scripts\PlayerIdentifier.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\FatBirdController.cs" />
     <Compile Include="Assets\Scripts\PlayerKnockback.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BlueBirdController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BeeController.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\RadishController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\Patroller.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\Patrolling.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\ChameleonController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\ChickenController.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\IdleWaiting.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\DuckController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BatController.cs" />
     <Compile Include="Assets\Scripts\BulletDamage.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\RockController.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\FlyingChase.cs" />
+    <Compile Include="Assets\Scripts\EnemiesBehaviours\FatBirdAscending.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\TurtleController.cs" />
     <Compile Include="Assets\Scripts\DestroyAfterDelay.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\AngryPigController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\MushController.cs" />
+    <Compile Include="Assets\Scripts\EnemiesControllers\PlantController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tilemap\rules.txt" />
