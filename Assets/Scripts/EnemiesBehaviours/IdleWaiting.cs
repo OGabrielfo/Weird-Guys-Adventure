@@ -6,15 +6,24 @@ public class IdleWaiting : StateMachineBehaviour
 {
 
     private Patroller _patrol;
+    private PatrollerSkull _patrolSkull;
     private Rigidbody2D _rb;
     private float _waitTime;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _patrol = animator.GetComponent<Patroller>();
+        if (animator.GetComponent<Patroller>() != null)
+        {
+            _patrol = animator.GetComponent<Patroller>();
+            _waitTime = _patrol.waitTime;
+        }
+        else if (animator.GetComponent<PatrollerSkull>() != null)
+        {
+            _patrolSkull = animator.GetComponent<PatrollerSkull>();
+            _waitTime = _patrolSkull.waitTime;
+        }
         _rb = animator.GetComponent<Rigidbody2D>();
-        _waitTime = _patrol.waitTime;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
