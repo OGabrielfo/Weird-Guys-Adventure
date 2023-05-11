@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class PlantController : MonoBehaviour
@@ -58,6 +59,7 @@ public class PlantController : MonoBehaviour
     void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        bullet.layer = LayerMask.NameToLayer("Enemy");
         bullet.GetComponent<Rigidbody2D>().velocity = -transform.right * bulletSpeed;
     }
 
