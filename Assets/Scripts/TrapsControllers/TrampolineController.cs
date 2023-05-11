@@ -8,11 +8,13 @@ public class TrampolineController : MonoBehaviour
 
     private Animator _anim;
     private Rigidbody2D _playerRb;
+    private Animator _playerAnim;
 
     private void Awake()
     {
         _anim = GetComponent<Animator>();
         _playerRb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        _playerAnim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class TrampolineController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             _playerRb.velocity = Vector2.zero;
+            _playerAnim.SetTrigger("Jump");
             _playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             _anim.SetTrigger("Jump");
         }
