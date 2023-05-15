@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\EnemiesControllers\Patroller.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\Patrolling.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\ChameleonController.cs" />
+    <Compile Include="Assets\PlayerDead.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\ChickenController.cs" />
     <Compile Include="Assets\Scripts\EnemiesBehaviours\IdleWaiting.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\DuckController.cs" />

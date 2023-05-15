@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
     private bool _facingRight = true;
     private bool _isGrounded;
     private int _jumpCount = 0;
+    private bool _playerDead;
 
         // Dash
     private bool _canDash = true;
@@ -79,18 +80,28 @@ public class PlayerController : MonoBehaviour
         // Is in enemy head?
         _hitEnemy = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, enemyCheck);
 
+        //Is Dead?
+        if (life <= 0)
+        {
+            _playerDead = true;
+        }
+        else
+        {
+            _playerDead = false;
+        }
+
         // Stop if doing a Dash
         if (_isDashing || _wallJumping) {
             return;
         }
-        if (!_isHited)
+        if (!_isHited && !_playerDead)
         {
             PlayerMove();
         }
         
 
         // Jump Control
-        if (Input.GetButtonDown("Jump") && _jumpCount < jumpLimit) {
+        if (Input.GetButtonDown("Jump") && _jumpCount < jumpLimit && !_playerDead) {
             Jump();
         }
 
@@ -101,7 +112,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Dash
-        if (Input.GetKeyDown(KeyCode.LeftShift) && _dashCount < dashLimit) {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && _dashCount < dashLimit && !_playerDead) {
             StartCoroutine(Dash());
             _dashCount++;
         }
@@ -137,6 +148,7 @@ public class PlayerController : MonoBehaviour
         _animator.SetBool("Dash", _isDashing);
         _animator.SetBool("Wall", _wallSliding);
         _animator.SetFloat("VerticalVelocity", _rigidbody.velocity.y);
+        _animator.SetInteger("Life", life);
 
         if (_wallJumping) {
             _animator.SetTrigger("DoubleJump");
