@@ -8,12 +8,16 @@ public class StageController : MonoBehaviour
 {
     public bool activateCheckPoint;
 
+    public int playerVisual = 1;
+
     private PlayerController _playerController;
+    private PlayerVisual _playerVisual;
     private float _timer;
 
     private void Awake()
     {
         _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        _playerVisual = _playerController.GetComponent<PlayerVisual>();
         _timer = 2f;
     }
     // Start is called before the first frame update
@@ -39,6 +43,8 @@ public class StageController : MonoBehaviour
             }
             
         }
+
+        _playerVisual.SetVisual(playerVisual);
     }
 
     public void ResetScene()

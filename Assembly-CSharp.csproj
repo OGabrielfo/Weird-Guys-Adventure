@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\EnemiesBehaviours\IdleWaiting.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\DuckController.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\PatrollerSkull.cs" />
+    <Compile Include="Assets\Scripts\PlayerVisual.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\BatController.cs" />
     <Compile Include="Assets\Scripts\BulletDamage.cs" />
     <Compile Include="Assets\Scripts\EnemiesControllers\RockController.cs" />

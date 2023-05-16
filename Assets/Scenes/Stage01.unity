@@ -1456,6 +1456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateCheckPoint: 0
+  playerVisual: 1
 --- !u!4 &1076411466
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,6 +1915,7 @@ GameObject:
   - component: {fileID: 1249327405}
   - component: {fileID: 1249327403}
   - component: {fileID: 1249327402}
+  - component: {fileID: 1249327406}
   m_Layer: 0
   m_Name: Player_NinjaFrog
   m_TagString: Player
@@ -1931,7 +1933,7 @@ Animator:
   m_GameObject: {fileID: 1249327398}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0eff2caa298fdce4aa8f43820518f5d3, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb2c75e1483ef604a87a40e463f62f08, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2111,6 +2113,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0.024328023, y: -0.14291668}
   m_Size: {x: 0.4292751, y: 0.66952515}
   m_Direction: 0
+--- !u!114 &1249327406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249327398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83cded6f436272544bc9b1cb80778dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorControllers:
+  - {fileID: 9100000, guid: 0eff2caa298fdce4aa8f43820518f5d3, type: 2}
+  - {fileID: 9100000, guid: eb2c75e1483ef604a87a40e463f62f08, type: 2}
+  sprites:
+  - {fileID: -1721282581, guid: 58aff5510e208e648bf0b9a3a4381e5b, type: 3}
+  - {fileID: -1570299375, guid: eb905010d1fe237408f5fe1c01339b9e, type: 3}
 --- !u!1001 &1260195050
 PrefabInstance:
   m_ObjectHideFlags: 0
