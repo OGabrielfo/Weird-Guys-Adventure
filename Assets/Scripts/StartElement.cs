@@ -5,16 +5,23 @@ using UnityEngine;
 public class StartElement : MonoBehaviour
 {
     public Transform startPoint;
-    private Transform _player;
+    public GameObject stageController;
+
+    private StageController _stageController;
 
     private void Awake()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _stageController = stageController.GetComponent<StageController>();
+
+        if (_stageController.tries <= 1)
+        {
+            _stageController.UpdatePosition(startPoint.position);
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        _player.position = startPoint.position;
+        
     }
 
     // Update is called once per frame
