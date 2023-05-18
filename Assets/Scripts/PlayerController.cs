@@ -255,4 +255,10 @@ public class PlayerController : MonoBehaviour
             _hitedEnemy = false;
         }
     }
+
+    private IEnumerator EndStage()
+    {
+        yield return new WaitForSeconds(2);
+        _animator.SetBool("EndStage", true);
+    }
 }

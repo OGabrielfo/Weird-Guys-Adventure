@@ -13,15 +13,15 @@ public class StartElement : MonoBehaviour
     {
         _stageController = stageController.GetComponent<StageController>();
 
-        if (_stageController.tries <= 1)
-        {
-            _stageController.UpdatePosition(startPoint.position);
-        }
+        
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (_stageController.tries <= 1)
+        {
+            _stageController.UpdatePosition(startPoint.position);
+        }
     }
 
     // Update is called once per frame

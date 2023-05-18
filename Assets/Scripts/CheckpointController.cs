@@ -31,7 +31,6 @@ public class CheckpointController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player em colisão");
             _stageController.UpdatePosition(transform.position);
             _anim.SetBool("Active", true);
         }

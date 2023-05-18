@@ -9,6 +9,7 @@ public class PlayerVisual : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
     private Animator _anim;
+    private static int _id;
 
     private void Awake()
     {
@@ -29,7 +30,8 @@ public class PlayerVisual : MonoBehaviour
 
     public void SetVisual(int id)
     {
-        _spriteRenderer.sprite = sprites[id];
-        _anim.runtimeAnimatorController = animatorControllers[id];
+        _id = id;
+        _spriteRenderer.sprite = sprites[_id];
+        _anim.runtimeAnimatorController = animatorControllers[_id];
     }
 }
